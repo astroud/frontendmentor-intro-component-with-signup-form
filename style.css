@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --blue-dark: hsl(249, 10%, 26%);
+  --blue-grayish: hsl(246, 25%, 77%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  background: url(./images/bg-intro-desktop.png) var(--red);
+  padding: 0 6.4vw;
+}
+
+h1 {
+  margin: 88px 0 24px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 129%;
+  text-align: center;
+  letter-spacing: -0.291667px;
+  color: #FFFFFF;
+}
+
+p {
+  margin-bottom: 4em;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 162%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+p.cta {
+  background: var(--blue);
+  height: 88px;
+  margin-bottom: 24px;
+  padding: 18px 20%;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 173%;
+  text-align: center;
+  letter-spacing: 0.267857px;
+}
+
+.cta strong { font-weight: 700; }
+
+.signup-form {
+  padding: 7.3%;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.signup-form input {
+  width: 100%;
+  height: 56px;
+  margin-bottom: 16px;
+  padding: 15px 19.41px;
+  border: 1px solid #DEDEDE;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 186%;
+  letter-spacing: 0.45px;
+  color: var(--blue-dark);
+  mix-blend-mode: normal;
+  opacity: 0.75;
+}
+
+.signup-form button {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 8px;
+  background: #38CC8B;
+  box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.0908818);
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 173%;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.signup-form-disclaimer {
+  padding: 0 20px;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 191%;
+  text-align: center;
+  color: var(--blue-grayish);
+}
+
+.signup-form-disclaimer a,
+.signup-form-disclaimer a:visited {
+  color: var(--red);
+  text-decoration: none;
+}
+
+footer p {
+  margin-top: 5em;
+  text-align: center;
+  font-size: 0.6em;
+  opacity: 0.65;
+}
+
+footer p:hover { opacity: 1; }
+footer a { color: #000;}
+
+@media screen and (max-width: 375px) {
+  body {
+    background: url(./images/bg-intro-mobile.png) var(--red);
+  }
+}
