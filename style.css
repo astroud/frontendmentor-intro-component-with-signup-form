@@ -17,16 +17,21 @@
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
   background: url(./images/bg-intro-desktop.png) var(--red);
   padding: 0 6.4vw;
 }
 
+.wide-view {
+  max-width: 540px;
+}
+
 h1 {
   margin: 88px 0 24px;
   font-weight: bold;
-  font-size: 28px;
+  font-size: clamp(28px, 4vw , 50px);
   line-height: 129%;
   text-align: center;
   letter-spacing: -0.291667px;
@@ -44,8 +49,8 @@ p {
 
 p.cta {
   background: var(--blue);
-  height: 88px;
   margin-bottom: 24px;
+  margin-left: 0;
   padding: 18px 20%;
   box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
   border-radius: 10px;
@@ -114,6 +119,10 @@ p.cta {
   text-decoration: none;
 }
 
+footer {
+  width: 100%;
+}
+
 footer p {
   margin-top: 5em;
   text-align: center;
@@ -127,5 +136,50 @@ footer a { color: #000;}
 @media screen and (max-width: 375px) {
   body {
     background: url(./images/bg-intro-mobile.png) var(--red);
+  }
+}
+
+@media screen and (min-width: 1275px) {
+  body {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .wide-view {
+    width: 50%;
+    max-width: 540px;
+    height: 100%;
+    margin-top: 121px;
+    margin-left: 15px;
+  }
+
+  h1 {
+    margin: calc(290px - 121px) 0 32px -15px;
+    text-align: left;
+    line-height: 110%;
+    letter-spacing: -0.520833px;
+  }
+
+  p {
+    margin-left: -15px;
+    font-weight: 500;
+    line-height: 162%;
+    text-align: left;
+    padding-right: 30px;
+  }
+
+  .signup-form input {
+    padding: 15px 15px 15px 32px;
+    margin-bottom: 20px;
+  }
+
+  .signup-form button {
+    letter-spacing: 0;
+    margin-bottom: 11px;
+  }
+
+  footer {
+    margin-top: 5em;
   }
 }
